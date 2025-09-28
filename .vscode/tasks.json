@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", // 任务名称，需与launch.json中一致
+            "type": "cppbuild",
+            "command": "g++", // 编译器（MinGW用g++，MSVC用cl）
+            "args": [
+                "-g", // 生成调试信息
+                "${file}", // 当前打开的文件（这里即main.cpp）
+                "-o", // 输出可执行文件
+                "${fileDirname}/${fileBasenameNoExtension}.exe" // 输出路径（同目录下的.exe）
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "编译器: g++"
+        }
+    ]
+}
