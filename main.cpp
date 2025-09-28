@@ -8,14 +8,14 @@ int main() {
     vector<string> msg {"Hello", "from", "VS Code", "and the C++ extension!"};
 
     for (const string& word : msg) {
-        cout << word << " "; // 在这一行打上断点
+        std::cout << word << " "; // 在这一行打上断点
     }
-    cout << endl;
+    std::cout << endl; // 确保在使用 std::cout 时也添加 endl
 
     int a = 10;
     int b = 20;
     int sum = a + b; // 在这一行也打上断点
-    cout << "The sum is: " << sum << endl;
+    std::cout << "The sum is: " << sum << endl; // 确保在使用 std::cout 时也添加 endl
 
     return 0;
 }
